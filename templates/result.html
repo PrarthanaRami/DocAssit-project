@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Result</title>
+    <style>
+        body {
+            background-color: #FFE6E6; /* Light Pink Background */
+            text-align: center;
+        }
+
+        #header {
+            color: red;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: Castellar, sans-serif;
+            margin-top: 50px;
+        }
+
+        #result {
+            background-color: #ADD8E6; /* Light Blue Background */
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            color: blue;
+            font-size: 25px;
+            font-family: Castellar, sans-serif;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <p>Predication</p>
+    </div>
+
+    <div id="result">
+        {% if prediction == 1 %}
+            <p>The health of the patient is very good</p>
+        {% else %}
+            <p>The health of the patient is not good.<br>
+            need to consult the doctor.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

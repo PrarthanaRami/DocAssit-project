@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Deployment</title>
+    <style>
+        body {
+            background-color: #FFCCCC; /* Light Pink Background */
+            text-align: center;
+        }
+
+        #title {
+            color: red;
+            font-size: 25px;
+            font-family: Castellar, sans-serif;
+            margin-top: 50px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            font-size: 20px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 5px;
+            border: 1px solid #000; /* Black Border */
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #ADD8E6; /* Light Blue Background */
+            color: #FFF; /* White Text */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title"> </h1>
+
+    <form action="/predict" method="post">
+        <!-- Include input fields for each column -->
+        <label style="color: #FF0000; font-family: Castellar, sans-serif;">HAEMATOCRIT:</label>
+        <input type="text" name="HAEMATOCRIT" required style="background-color: #FF0000; color: #FFF;"><br>
+
+        <label style="color: #FF4500;">HAEMOGLOBINS:</label>
+        <input type="text" name="HAEMOGLOBINS" required style="background-color: #FF4500; color: #FFF;"><br>
+
+        <label style="color: #FF8C00;">ERYTHROCYTE:</label>
+        <input type="text" name="ERYTHROCYTE" required style="background-color: #FF8C00; color: #FFF;"><br>
+
+        <label style="color: #FFD700;">LEUCOCYTE:</label>
+        <input type="text" name="LEUCOCYTE" required style="background-color: #FFD700; color: #000;"><br>
+
+        <label style="color: #0000FF;">THROMBOCYTE:</label>
+        <input type="text" name="THROMBOCYTE" required style="background-color: #ADFF2F; color: #000;"><br>
+
+        <label style="color: #00FF00;">MCH:</label>
+        <input type="text" name="MCH" required style="background-color: #00FF00; color: #000;"><br>
+
+        <label style="color: #FF8C00;">MCHC:</label>
+        <input type="text" name="MCHC" required style="background-color: #00FFFF; color: #000;"><br>
+
+        <label style="color: #FF8C00;">MCV:</label>
+        <input type="text" name="MCV" required style="background-color: #0000FF; color: #FFF;"><br>
+
+        <label style="color: #8A2BE2;">AGE:</label>
+        <input type="text" name="AGE" required style="background-color: #8A2BE2; color: #FFF;"><br>
+
+        <label style="color: #4B0082;">SEX:</label>
+        <input type="text" name="SEX" required style="background-color: #4B0082; color: #FFF;"><br>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
